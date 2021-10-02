@@ -10,45 +10,33 @@ const H = ctx.canvas.height;
 function draw() {
   //
   // Iteration 1: road drawing
-  //
-
-  
-    /*ctx.fillRect(10, 70, 1000, 1600);
-
-    ctx.clearRect(120, 60, 800, 1600);
-    ctx.strokeRect(100, 70, 50, 1600); */
-    
-  
-  
-
+ 
   ctx.fillStyle = 'green';
-  ctx.fillRect(200, 260, 1000, 1600);
+  ctx.fillRect(0, 0, W, H);
 
   
 
   ctx.fillStyle = 'grey';
-  ctx.fillRect(290, 260, 625, 1600); 
+  ctx.fillRect(90, 0, 825, H); 
   
   
 
   ctx.fillStyle = 'white';
-  ctx.fillRect(310, 260, 25, 1600);
+  ctx.fillRect(110, 0, 25, H);
 
-  /* Deuxième ligne blanche
-  310 + la largeur du gris (625) - la bordure blanche (25) */
+  /* Deuxième ligne blanche */
 
   ctx.fillStyle = 'white';
-  ctx.fillRect(870, 260, 25, 1600);
+  ctx.fillRect(870, 0, 25, H);
 
-
-  /* 1000 (largeur du vert) / 2  -  25 (largeur du blanc)/2 */
+  /* Traits pointillés */
   ctx.beginPath();
   ctx.strokeStyle = 'white';
-  ctx.setLineDash([50, 40]);
+  ctx.setLineDash([50, 70]);
   ctx.moveTo(W/2,0);
   ctx.lineTo(W/2, 1600);
+  ctx.lineWidth = 10;
   ctx.stroke();
-  // ctx.fillRect(600, 260, 25, 1600);
 
 
   
